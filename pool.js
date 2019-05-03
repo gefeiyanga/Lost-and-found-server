@@ -4,7 +4,8 @@ var pool = mysql.createConnection({
     user:'root',
     password:'',
     database:'xcx',
-    connectionLimit:10
+    connectionLimit:10,
+    multipleStatements: true
 });
 //把创建好的连接池导出
 module.exports = pool;
