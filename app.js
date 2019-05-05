@@ -47,6 +47,8 @@ const lMealcardList=require('./routes/lMealcardList.router');
 const lIdcardList=require('./routes/lIdcardList.router');
 const lOtherList=require('./routes/lOtherList.router');
 
+const lLastest=require('./routes/lLastest.router');
+const pLastest=require('./routes/pLastest.router');
 
 var app = express();
 var server = app.listen(3000);
@@ -99,3 +101,6 @@ app.use('/pStuidcardList',pStuidcardList);
 app.use('/pMealcardList',pMealcardList);
 app.use('/pIdcardList',pIdcardList);
 app.use('/pOtherList',pOtherList);
+
+app.use('/lLastest',lLastest);
+app.use('/pLastest',pLastest);
