@@ -50,6 +50,16 @@ const lOtherList=require('./routes/lOtherList.router');
 const lLastest=require('./routes/lLastest.router');
 const pLastest=require('./routes/pLastest.router');
 
+const search=require('./routes/search.router');
+const searchDetail=require('./routes/searchDetail.router');
+
+const returnCommit=require('./routes/returnCommit.router');
+const getbackReqCommit=require('./routes/getbackReqCommit.router');
+
+
+const returnNoticeList=require('./routes/returnNoticeList.router');
+const getbackReqNoticeList=require('./routes/getbackReqNoticeList.router');
+
 var app = express();
 var server = app.listen(3000);
 
@@ -104,3 +114,13 @@ app.use('/pOtherList',pOtherList);
 
 app.use('/lLastest',lLastest);
 app.use('/pLastest',pLastest);
+
+
+app.use('/search',search);
+app.use('/searchDetail',searchDetail);
+
+app.use('/returnCommit',returnCommit);
+app.use('/getbackReqCommit',getbackReqCommit);
+
+app.use('/returnNoticeList',returnNoticeList);
+app.use('/getbackReqNoticeList',getbackReqNoticeList);

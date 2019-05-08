@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const pool=require('../pool');
 router.get('/',(req,res)=>{
-    var sql='select id, avatar,DATE_FORMAT(date,"%Y-%m-%d %H:%i") AS date,uname,title,detail,tele,name,pic from p_phone';
+    var sql='select releaseTitle,releaseName,returnNickName,returnAvatarUrl,returnTitle,returnDescribe,returnName,returnTele from getback_req_tab';
     pool.query(sql,[],(err,result)=>{
         if(err) throw err;
         console.log(result);
