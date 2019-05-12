@@ -55,10 +55,17 @@ const searchDetail=require('./routes/searchDetail.router');
 
 const returnCommit=require('./routes/returnCommit.router');
 const getbackReqCommit=require('./routes/getbackReqCommit.router');
+const rejectCommit=require('./routes/rejectCommit.router');
 
 
 const returnNoticeList=require('./routes/returnNoticeList.router');
 const getbackReqNoticeList=require('./routes/getbackReqNoticeList.router');
+
+const setStatus=require('./routes/setStatus.router');
+
+const finish=require('./routes/finish.router');
+
+const showFinish=require('./routes/showFinish.router');
 
 var app = express();
 var server = app.listen(3000);
@@ -121,6 +128,13 @@ app.use('/searchDetail',searchDetail);
 
 app.use('/returnCommit',returnCommit);
 app.use('/getbackReqCommit',getbackReqCommit);
+app.use('/rejectCommit',rejectCommit);
 
 app.use('/returnNoticeList',returnNoticeList);
 app.use('/getbackReqNoticeList',getbackReqNoticeList);
+
+app.use('/setStatus',setStatus);
+
+app.use('/finish',finish);
+
+app.use('/showFinish',showFinish);
