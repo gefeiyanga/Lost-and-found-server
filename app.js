@@ -67,6 +67,13 @@ const finish=require('./routes/finish.router');
 
 const showFinish=require('./routes/showFinish.router');
 
+const returnDot=require('./routes/returnDot.router');
+const reqDot=require('./routes/reqDot.router');
+
+const cancelReturnDot=require('./routes/cancelReturnDot.router');
+const cancelReqDot=require('./routes/cancelReqDot.router');
+
+
 var app = express();
 var server = app.listen(3000);
 
@@ -138,3 +145,9 @@ app.use('/setStatus',setStatus);
 app.use('/finish',finish);
 
 app.use('/showFinish',showFinish);
+
+app.use('/returnDot',returnDot);
+app.use('/reqDot',reqDot);
+
+app.use('/cancelReturnDot',cancelReturnDot);
+app.use('/cancelReqDot',cancelReqDot);
