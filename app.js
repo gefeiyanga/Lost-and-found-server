@@ -73,6 +73,7 @@ const reqDot=require('./routes/reqDot.router');
 const cancelReturnDot=require('./routes/cancelReturnDot.router');
 const cancelReqDot=require('./routes/cancelReqDot.router');
 
+const noRepeatTitle=require('./routes/noRepeatTitle.router');
 
 var app = express();
 var server = app.listen(3000);
@@ -151,3 +152,5 @@ app.use('/reqDot',reqDot);
 
 app.use('/cancelReturnDot',cancelReturnDot);
 app.use('/cancelReqDot',cancelReqDot);
+
+app.use('/noRepeatTitle',noRepeatTitle);
