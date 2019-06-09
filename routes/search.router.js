@@ -10,11 +10,16 @@ router.get('/',(req,res)=>{
         if(err) throw err;
         // console.log(typeof(result));
         console.log(typeof(result))
+        var flag=true;
         for(var item in result){
             if(result[item].length>0){
+                flag=false;
                 res.send(result[item]);
-                return;
+                break;
             }
+        }
+        if(flag){
+            res.send("nothing");
         }
     });
 })

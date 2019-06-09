@@ -70,10 +70,23 @@ const showFinish=require('./routes/showFinish.router');
 const returnDot=require('./routes/returnDot.router');
 const reqDot=require('./routes/reqDot.router');
 
+const setDealDot=require('./routes/setDealDot.router');
+
 const cancelReturnDot=require('./routes/cancelReturnDot.router');
 const cancelReqDot=require('./routes/cancelReqDot.router');
+const cancelDealDot=require('./routes/cancelDealDot.router');
 
 const noRepeatTitle=require('./routes/noRepeatTitle.router');
+
+const modify=require('./routes/modify.router');
+const modify2=require('./routes/modify2.router');
+const modifyOther=require('./routes/modifyOther.router');
+const modifyOther2=require('./routes/modifyOther2.router');
+
+const ok=require('./routes/ok.router');
+const ok2=require('./routes/ok2.router');
+
+const deleteFinish=require('./routes/deleteFinish.router');
 
 var app = express();
 var server = app.listen(3000);
@@ -150,7 +163,20 @@ app.use('/showFinish',showFinish);
 app.use('/returnDot',returnDot);
 app.use('/reqDot',reqDot);
 
+app.use('/setDealDot',setDealDot);
+
 app.use('/cancelReturnDot',cancelReturnDot);
 app.use('/cancelReqDot',cancelReqDot);
+app.use('/cancelDealDot',cancelDealDot);
 
 app.use('/noRepeatTitle',noRepeatTitle);
+
+app.use('/modify',modify);
+app.use('/modify2',modify2);
+app.use('/modifyOther',modifyOther);
+app.use('/modifyOther2',modifyOther2);
+
+app.use('/ok',ok);
+app.use('/ok2',ok2);
+
+app.use('/deleteFinish',deleteFinish);

@@ -4,8 +4,8 @@ const pool=require('../pool');
 router.post('/',(req,res)=>{
     var val=req.body;
     console.log(val);
-    var sql='update return_tab set isFinish=1 where releaseTitle=? and releaseOpenId=?';
-    pool.query(sql,[val.releaseTitle,val.releaseOpenId],(err,result)=>{
+    var sql='update return_tab set isUnreadDeal=0 where releaseOPenId=?';
+    pool.query(sql,[val.releaseOPenId],(err,result)=>{
         if(err) throw err;
         res.send(result);
     });
